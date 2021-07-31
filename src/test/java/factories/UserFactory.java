@@ -14,8 +14,8 @@ public class UserFactory {
                 email(getRandomEmail()).
                 password("Qwasz1").
                 username("Username"+ RandomUtils.nextInt(0, 100)).
-                lastName("Иванова").
-                firstName("Мария").
+                lastName("Ivanova").
+                firstName("Maria").
                 build();
     }
 }

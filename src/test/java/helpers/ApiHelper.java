@@ -55,9 +55,10 @@ public class ApiHelper {
     }
 
     @Step("Send get request")
-    public static Response get(String path, Map<String, String> headers) {
+    public static Response get(String path, Map<String, String> headers, Map<String, String> cookies) {
         Response response = getBaseRequest()
                 .headers(new Headers(getHeaders(headers)))
+                .cookies(cookies)
                 .get(path);
         logResponse(response);
         return response;
