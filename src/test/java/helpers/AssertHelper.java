@@ -9,6 +9,6 @@ public class AssertHelper {
     @Step("Check a response status code")
     public static void checkStatusCode(Response response, int expectedStatusCode){
         int actualStatusCode = response.getStatusCode();
-        Assert.assertEquals(actualStatusCode, expectedStatusCode, "Response is wrong for the response: " + response.asString());
+        Assert.assertEquals(actualStatusCode, expectedStatusCode, "Status code is wrong for the response: " + response.asString());
     }
 }
