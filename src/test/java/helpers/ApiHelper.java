@@ -74,18 +74,21 @@ public class ApiHelper {
     }
 
     @Step("Send put request")
-    public static Response put(String path, Map<String, String> headers, Object o) {
+    public static Response put(String path, Map<String, String> headers, Map<String, String> cookies, Map<String,String> params) {
         Response response = getBaseRequest()
                 .headers(new Headers(getHeaders(headers)))
-                .body(o)
+                .cookies(cookies)
+                .queryParams(params)
                 .put(path);
         logResponse(response);
         return response;
     }
 
     @Step("Send delete request")
-    public static Response delete(String path) {
+    public static Response delete(String path, Map<String, String> headers, Map<String, String> cookies) {
         Response response = getBaseRequest()
+                .headers(new Headers(getHeaders(headers)))
+                .cookies(cookies)
                 .delete(path);
         logResponse(response);
         return response;

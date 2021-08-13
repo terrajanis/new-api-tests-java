@@ -7,6 +7,8 @@
         <classes>
             <class name = "tests.GetUserInfoTest" />
             <class name = "tests.RegisterNewUserTest" />
+            <class name = "tests.EditUserTest" />
+            <class name = "tests.DeleteUserTest" />
         </classes>
     </test>
 </suite>
