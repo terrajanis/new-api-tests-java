@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  api-test_runner:
+    build: .
+    image: api-test-runner
+    container_name: api-test-runner-works
